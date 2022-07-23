@@ -1,0 +1,7 @@
+@import-normalize;
+@import 'recipe-list.css';
+
+*, *::before, *::after{
+    font-family: sans-serif;
+    
+}
