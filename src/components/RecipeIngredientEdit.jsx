@@ -3,7 +3,8 @@ import React from "react";
 const RecipeIngredientEdit = (props) => {
     const { 
         ingredient, 
-        handleIngredientChange
+        handleIngredientChange,
+        handleIngredientDelete
     } = props;
 
     function handleChange(changes){
@@ -12,9 +13,9 @@ const RecipeIngredientEdit = (props) => {
 
     return(
         <>
-            <input type="text" className="recipe-edit__input" value={ingredient.name} onInput={e => handleChange({name: e.target.value})}/>
-            <input type="text" className="recipe-edit__input" value={ingredient.amount} onInput={e => handleChange({amount: e.target.value})}/>
-            <button className="btn btn--danger">&times;</button>
+            <input type="text" className="recipe-edit__input" value={ingredient.name} onChange={e => handleChange({name: e.target.value})}/>
+            <input type="text" className="recipe-edit__input" value={ingredient.amount} onChange={e => handleChange({amount: e.target.value})}/>
+            <button className="btn btn--danger" onClick={()=> handleIngredientDelete(ingredient.id)}>&times;</button>
         </>
     )
 };
