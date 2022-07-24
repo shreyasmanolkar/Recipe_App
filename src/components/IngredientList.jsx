@@ -7,7 +7,7 @@ const IngredientList = ({ingredients}) => {
     })
 
     return(
-        <div>
+        <div className="ingredient-grid">
             {ingredientElements}
         </div>
     )
